@@ -100,6 +100,15 @@ h4 {
     font-family: 'Jersey M54', sans-serif;
 }  
 
+h5 {
+    font-size: 30px;
+    line-height: 1.375em;
+    color: rgb(60, 66, 72);
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-family: 'Jersey M54', sans-serif;
+}  
+
 body {
     font-size: 35px;
     font-family: 'Coolvetica', cursive;
