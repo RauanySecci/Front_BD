@@ -66,7 +66,7 @@
   }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: rgb(233,82,91)!important; /* cor da letra quando passa por cima, cabeçalho */
+    color: white!important; /* cor da letra quando passa por cima, cabeçalho */
   
   }
 .panel-footer h3 {
