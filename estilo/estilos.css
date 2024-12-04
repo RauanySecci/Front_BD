@@ -12,12 +12,16 @@
     font-style: normal;
 }
  
+
+
+
+
 .btn{
     font-size: 30px;
     background-color:rgb(215, 108, 54);
     border-radius: 50px; 
     margin: 0 15px;
-    width: 110px;
+    width: auto;
     height: 50px;
     font-family: 'Coolvetica', cursive;
     box-shadow: 0 0 0 0;
