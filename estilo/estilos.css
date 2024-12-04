@@ -12,12 +12,16 @@
     font-style: normal;
 }
  
+
+
+
+
 .btn{
     font-size: 30px;
     background-color:rgb(215, 108, 54);
     border-radius: 50px; 
     margin: 0 15px;
-    width: 110px;
+    width: auto;
     height: 50px;
     font-family: 'Coolvetica', cursive;
     box-shadow: 0 0 0 0;
@@ -89,6 +93,15 @@ h2 {
 
 h4 {
     font-size: 60px;
+    line-height: 1.375em;
+    color: rgb(60, 66, 72);
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-family: 'Jersey M54', sans-serif;
+}  
+
+h5 {
+    font-size: 30px;
     line-height: 1.375em;
     color: rgb(60, 66, 72);
     font-weight: 300;
