@@ -54,7 +54,7 @@
 	
 		<nav class="navbar navbar-expand-md fixed-top navbar-dark" id="navbar">
 
-			<a class="navbar-brand" href="#pagina"><img src="./imagem/Capturar.PNG" widht="50" height = "50"></a>
+			<a class="navbar-brand" href="homepage.html"><img src="./imagem/Capturar.PNG" widht="50" height = "50"></a>
 			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
 				<span class="navbar-toggler-icon"></span>                       
@@ -80,14 +80,14 @@
             <div class="col" style="background-color: #cccccc; padding: 20px; padding-left: 40px; padding-right: 40px; border-radius: 10px; margin: 5px;">
                 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
                     <div style="flex: 1; min-width: 300px; text-align: left; margin-right: 20px;">
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Nome: </b></h6>
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Gênero: </b></h6>
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">CPF: </b></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Nome: </b><span id="atleta-nome"></span></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Gênero: </b><span id="atleta-genero"></span></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">CPF: </b><span id="atleta-cpf"></span></h6>
                     </div>
                     <div style="flex: 1; min-width: 300px; text-align: left;">
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Idade: </b></h6>
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Endereço: </b></h6>
-                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Telefone: </b></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Idade: </b><span id="atleta-idade"></span></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Endereço: </b><span id="atleta-endereco"></span></h6>
+                        <h6><b style="margin-right: 5px; color: rgb(60, 66, 72)">Telefone: </b><span id="atleta-telefone"></span></h6>
                     </div>
                 </div>
             </div>
@@ -112,6 +112,55 @@
                 </table>
             </div>
         </div>
+    <script>
+        // Substituir com os dados do Banco de Dados
+        const times = [
+            { nome: "Time A", esporte: "Futebol", treinador: "João", genero: "Masculino", organizacao: "UniABC" },
+            { nome: "Time B", esporte: "Basquete", treinador: "Maria", genero: "Feminino", organizacao: "UniXYZ" }
+        ];
 
+
+        function preencherTabela() {
+            const tabela = document.getElementById("tabela-times").getElementsByTagName("tbody")[0];
+
+            if (times.length === 0) {
+                // Caso não haja dados, exibe uma mensagem
+                const row = tabela.insertRow();
+                const cell = row.insertCell(0);
+                cell.colSpan = 5; // Mescla todas as colunas
+                cell.style.textAlign = "center";
+                cell.textContent = "Nenhum time disponível.";
+            } else {
+                times.forEach(time => {
+                    const row = tabela.insertRow();
+                    row.insertCell(0).textContent = time.nome;
+                    row.insertCell(1).textContent = time.esporte;
+                    row.insertCell(2).textContent = time.treinador;
+                    row.insertCell(3).textContent = time.genero;
+                    row.insertCell(4).textContent = time.organizacao;
+                });
+            }
+        }
+
+        preencherTabela();
+
+        // Substituir com os dados do Banco de Dados
+        const atleta = {
+            nome: "João Silva",
+            genero: "Masculino",
+            cpf: "123.456.789-00",
+            idade: "21",
+            endereco: "Rua das Flores, 123",
+            telefone: "(11) 98765-4321"
+        };
+
+        // Preenchendo os dados no HTML
+        document.getElementById("atleta-nome").textContent = atleta.nome;
+        document.getElementById("atleta-genero").textContent = atleta.genero;
+        document.getElementById("atleta-cpf").textContent = atleta.cpf;
+        document.getElementById("atleta-idade").textContent = atleta.idade;
+        document.getElementById("atleta-endereco").textContent = atleta.endereco;
+        document.getElementById("atleta-telefone").textContent = atleta.telefone;
+    </script>
 	</body>
 </html>

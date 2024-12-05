@@ -36,72 +36,121 @@
 
 	</nav>
 				
-<!-- Cadastro -->
-<div style="margin-top: 70px;">
+	<!-- Cadastro -->
+	<div style="margin-top: 70px;">
 
-		<div id="cadastro" class="container-fluid text-center">
-			<h2>Cadastro de Atleta</h2>
-			<label for="cpf" class="d-block text-center" style="white-space: nowrap; text-align: center; display: block; margin: 0 auto; width: fit-content;">
-				Preencha seus dados para se cadastrar
-			</label><br>
-			<div class="row">
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="cpf"  placeholder="CPF" type="text" required>
-				</div>
-				
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="nome"  placeholder="Nome" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="genero"  placeholder="Gênero" type="text" required>
-				</div>
-				
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="rua"  placeholder="Rua" type="text" required>
-				</div>
-				
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="bairro"  placeholder="Bairro" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="numero"  placeholder="Numero" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="cidade"  placeholder="Cidade" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="uf"  placeholder="UF" type="text" required>
-				</div>
-				
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="telefone"  placeholder="Telefone" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="codigo_matricula"  placeholder="Codigo Matricula" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="ano_ingresso"  placeholder="Ano Ingresso" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="universidade"  placeholder="Universidade" type="text" required>
-				</div>
-
-				<div class="col-sm-6 form-group">
-					<input class="form-control" id="curso"  placeholder="Curso" type="text" required>
-				</div>
-
-			</div><br>
-					<button class="btn" type="submit" id="ba2" data-toggle="modal" data-target="#exampleModalCenter" style="padding-bottom: 50px;">CADASTRAR</button>
+			<div id="cadastro" class="container-fluid text-center">
+				<h2>Cadastro de Atleta</h2>
+				<label for="cpf" class="d-block text-center" style="white-space: nowrap; text-align: center; display: block; margin: 0 auto; width: fit-content;">
+					Preencha seus dados para se cadastrar
+				</label><br>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="cpf"  placeholder="CPF" type="text" required>
+					</div>
 					
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="nome"  placeholder="Nome" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="genero"  placeholder="Gênero" type="text" required>
+					</div>
+					
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="rua"  placeholder="Rua" type="text" required>
+					</div>
+					
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="bairro"  placeholder="Bairro" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="numero"  placeholder="Numero" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="cidade"  placeholder="Cidade" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="uf"  placeholder="UF" type="text" required>
+					</div>
+					
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="telefone"  placeholder="Telefone" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="codigo_matricula"  placeholder="Codigo Matricula" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="ano_ingresso"  placeholder="Ano Ingresso" type="text" required>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<select class="form-control" id="universidade" required>
+							<option value="">Selecione sua universidade</option>
+							<!-- Opções serão preenchidas dinamicamente -->
+						</select>
+					</div>
+			
+					<div class="col-sm-6 form-group">
+						<select class="form-control" id="curso" required>
+							<option value="">Selecione seu curso</option>
+							<!-- Opções serão preenchidas dinamicamente -->
+						</select>
+					</div>
+
+				</div><br>
+						<button class="btn" type="submit" id="ba2" data-toggle="modal" data-target="#exampleModalCenter" style="padding-bottom: 50px;">CADASTRAR</button>
+						
+		</div>
+			<script src = "./scripts/Inscrever.js">	</script>
 	</div>
-		<script src = "./scripts/Inscrever.js">	</script>
-</div>
+
+		<script>
+			
+			// Substituir com os dados do Banco de Dados
+			const universidades = [
+				{ id: 1, nome: "Universidade A" },
+				{ id: 2, nome: "Universidade B" },
+				{ id: 3, nome: "Universidade C" }
+			];
+
+			const cursos = [
+				{ id: 1, nome: "Engenharia de Computação", universidadeId: 1 },
+				{ id: 2, nome: "Administração", universidadeId: 1 },
+				{ id: 3, nome: "Medicina", universidadeId: 2 },
+				{ id: 4, nome: "Arquitetura", universidadeId: 3 }
+			];
+
+			const selectUniversidade = document.getElementById("universidade");
+			const selectCurso = document.getElementById("curso");
+
+
+			universidades.forEach(uni => {
+				const option = document.createElement("option");
+				option.value = uni.id;
+				option.textContent = uni.nome;
+				selectUniversidade.appendChild(option);
+			});
+
+
+			selectUniversidade.addEventListener("change", () => {
+				const universidadeId = parseInt(selectUniversidade.value);
+				selectCurso.innerHTML = '<option value="">Selecione seu curso</option>'; 
+
+
+				const cursosFiltrados = cursos.filter(curso => curso.universidadeId === universidadeId);
+				cursosFiltrados.forEach(curso => {
+					const option = document.createElement("option");
+					option.value = curso.id;
+					option.textContent = curso.nome;
+					selectCurso.appendChild(option);
+				});
+			});
+		</script>
 	</body>
 </html>
